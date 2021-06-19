@@ -1,0 +1,64 @@
+.header{
+    background: #1d3557;
+    color: #fff;
+    margin-bottom: 10px;
+    }
+    .header .header_logo img{
+      width: 4.375rem;
+    }
+    .header .header_logo a{
+      text-decoration: none !important;
+      font-size: 16px;
+      color: #fff;
+    }
+    .header .header_logo a span{
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .header .example-spacer {
+      flex: 1 1 auto;
+    }
+    .header .header_search .mat-form-field{
+      font-size: 13px !important;
+    }
+    .header .header_notify .mat-icon{
+      vertical-align: bottom !important;
+      font-size: 16px;
+    }
+    .mat-menu-item img{
+      height: 45px;
+      width: 45px;
+      object-fit: cover;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .mat-menu-item .mat-button{
+      color: #fff;
+      font-size: 12px;
+      margin: 5px;
+      border-radius: 20px;
+      line-height: 28px;
+    }
+    .mat-menu-item .noti_acc{
+      background: #2541B2;
+    }
+    .mat-menu-item .noti_rej{
+      background: #FB3640;
+    }
+    .header .header_profile_sec .mat-button img{
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid gray;
+    }
+    .header .header_profile_sec .mat-button span{
+      font-size: 13px !important;
+    }
+    .header .header_profile_sec .mat-button span i{
+      color: #e63946;
+      font-size: 11px;
+      margin-left: 5px;
+    }
+    

@@ -1,0 +1,72 @@
+<mat-toolbar class="header">
+    <div class="header_logo">
+      <a href="">
+       <img src="assets\images\ramphal_logo.png" alt="brand logo">
+       <span>Admin Template</span>
+      </a>
+    </div>
+      <span class="example-spacer"></span>
+<div class="header_search">
+ <mat-form-field [floatLabel]="'never'">
+   <input matInput type="search" name="search" [(ngModel)]="value" placeholder="search">
+   <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+     <mat-icon>close</mat-icon>
+   </button>
+ </mat-form-field>
+</div>
+     <div class="header_notify">
+       <button mat-button [matMenuTriggerFor]="notification"> <mat-icon matBadge="4" matBadgeColor="warn" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">notifications</mat-icon></button>
+       <mat-menu #notification="matMenu" class="header_drp_dwn">
+         <div mat-menu-item>
+             <img src="assets\images\header_profile_pic.jpg" alt="notification_pic">
+             <span>praveen<button mat-button>
+               <mat-icon>check</mat-icon>
+             </button>
+             <button mat-button>
+               <mat-icon>delete</mat-icon>
+             </button></span>
+             </div>
+         <div mat-menu-item>
+             <img src="assets\images\header_profile_pic.jpg" alt="notification_pic">
+             <span>praveen send you a request?</span>
+             </div>
+             <div mat-menu-item class="text-center">
+               <button mat-button class="noti_acc"> confirm</button>
+               <button mat-button class="noti_rej">Delete</button> 
+             </div>
+       </mat-menu>
+       <button mat-button [matMenuTriggerFor]="message"> <mat-icon matBadge="5" matBadgeColor="warn" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">messages</mat-icon></button>
+       <mat-menu #message="matMenu" class="header_drp_dwn">
+         <div mat-menu-item>
+           <mat-icon>email</mat-icon>
+           <span>message from praveen</span>
+             </div>
+         <div mat-menu-item>
+           <mat-icon>settings</mat-icon>
+           <span>changed the settings</span>
+             </div>
+       </mat-menu>
+     </div>
+     <div class="header_profile_sec">
+       <button mat-button [matMenuTriggerFor]="profile">
+         <img src="assets\images\user_profile.jpg" alt="">
+         <span>Akhil kumar <i class="bi bi-caret-down-fill profile_caret"></i></span>
+       </button>
+       <mat-menu #profile="matMenu">
+         <button mat-menu-item>
+           <mat-icon>account_circle</mat-icon>
+           <span>Profile</span>
+         </button>
+         <button mat-menu-item>
+           <mat-icon>settings</mat-icon>
+           <span>user settings</span>
+         </button>
+         <button mat-menu-item>
+           <mat-icon>exit_to_app</mat-icon>
+           <span>Logout</span>
+         </button>
+       </mat-menu>
+     </div>
+    </mat-toolbar>
+  
+  

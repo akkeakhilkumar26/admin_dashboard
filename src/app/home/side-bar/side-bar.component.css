@@ -1,0 +1,61 @@
+
+  .left_nav_main {
+    /* max-width: 14.666667%; */
+    overflow-y: auto;
+   }
+    .left_nav h4{
+    background: #1d3557;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 0px;
+    }
+    .left_nav_sec {
+      margin-bottom: 10px;
+    }
+    .left_nav_sec p a {
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+    }
+    .left_nav_sec p{
+      font-weight: 500;
+      font-size: 13px;
+    }
+    .left_nav_sec p i{
+      margin-right: 8px;
+    }
+    .left_nav_sec .bi-person::before, .left_nav_sec .bi-people::before, .left_nav_sec .bi-building::before {
+      content: "\f4e1";
+      border: 1px solid #1d3557;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .left_nav_sec .bi-people::before {
+      content: "\f4d0";
+    }
+    .left_nav_sec .bi-building::before {
+      content: "\f1dd";
+    }
+    .left_nav button i{
+      margin-right: 5px;
+    }
+    .left_nav_sec button{
+      border: 1px solid #ccc;
+      width: 100%;
+      text-align: left;
+      font-size: 12px;
+      border-left: 8px solid #1d3557;
+      border-radius: 0px 20px 20px 0px;
+      line-height: 30px;
+      margin-bottom: 12px;
+      font-weight: normal;
+    }
+
+
