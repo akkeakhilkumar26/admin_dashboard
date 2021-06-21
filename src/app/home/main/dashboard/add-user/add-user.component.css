@@ -1,0 +1,97 @@
+.user_sec_main{
+    border: 2px dotted #a8dadc;
+    padding: 16px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+  .user_sec_main p, .user_sec_permissions p{
+      font-weight: 500; 
+      color: #e63946;
+      margin-bottom: 20px;
+  }
+  .user_sec_main p span{
+    border-bottom: 2px dotted #a8dadc;
+    padding-bottom: 6px; 
+  }
+  .user_profile_sec p{
+    margin-top: 15px;
+  }
+  .user_profile_sec
+    .add_user_icon{
+    border: 1px solid #2a363b;
+    height: 60px; 
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    } 
+    
+  .add_user_icon i{
+    color: #7c7575;
+  }
+  .add_user_section button{
+    font-size: 12px;
+    color: #1d3557;
+  }
+  .bi-upload::before {
+    content: "\f603";
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  input[type='file']{
+    height:80px;
+    width:80px;
+    position:absolute;
+    top: 75px;
+    left:47%;
+    opacity:0;
+    cursor:pointer;
+  }
+ .add_user_section .add_user_form {
+    width: 100%;
+  }
+ .add_user_section .add_user_form .add_user_form_field .mat-form-field{
+    width: 100%;
+    line-height: 1;
+    padding-bottom: 0px;
+    font-size: 12px;
+  }
+  .add_user_section .add_user_form .add_user_form_field .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding-bottom: 15px;
+}
+.add_user_section .add_user_form .add_user_form_field .mat-checkbox-label{
+    font-size: 12px !important;
+}
+.add_user_section .add_user_form .user_sec_permissions{
+text-align: left;
+}
+.add_user_section .add_user_form .add_user_btns {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .add_user_section .add_user_form .add_user_btns button{
+    display: flex;
+    padding: 8px;
+    margin: 15px 8px;
+    border-radius: 36px;
+    flex: 0 0 100px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
+    font-size: 12px;
+  }
+  .add_user_section .add_user_form  .add_user_btns button a, .creat_group_btn button a{
+    color: white;
+    text-decoration: none;
+  }
+  .add_user_section .add_user_form .add_user_sub_btn{
+      background: #1d3557;
+  }
+  .add_user_section .add_user_form .add_user_can_btn{
+      background: #e63946;
+  }

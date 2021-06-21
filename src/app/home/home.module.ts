@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreategroupComponent } from './side-bar/creategroup/creategroup.component';
+import { GrouplistComponent } from './side-bar/grouplist/grouplist.component';
 
 
 
@@ -15,7 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    SideBarComponent
+    SideBarComponent,
+    CreategroupComponent,
+    GrouplistComponent
   ],
   imports: [
     CommonModule,

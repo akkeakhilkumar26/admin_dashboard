@@ -12,12 +12,12 @@
                     <p><a href="#">
                         <i class="bi bi-people"></i>Groups
                     </a></p>
-                    <button mat-button><i class="bi bi-plus-circle"></i>Create group</button>
-                    <button mat-button [matMenuTriggerFor]="menu"><i class="bi bi-card-list"></i>Group list</button>
-                    <mat-menu #menu="matMenu">
-                      <button mat-menu-item>Group1</button>
-                      <button mat-menu-item>Group2</button>
-                    </mat-menu>                    
+                    <button mat-button (click)='openDialog()'><i class="bi bi-plus-circle"></i>Create group</button>
+                    <button mat-button [matMenuTriggerFor]="grouplist" #menuTrigger><i class="bi bi-card-list"></i>Group list</button>
+                    <mat-menu #grouplist="matMenu">
+                        <button mat-menu-item (click)="openGroup()">Group-A</button>
+                        <button mat-menu-item (click)="openGroup()">Group-B</button>
+                    </mat-menu> 
                 </section>
                 <section class="left_nav_sec">
                     <p><a href="#">
