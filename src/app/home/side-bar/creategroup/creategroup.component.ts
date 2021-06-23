@@ -10,8 +10,9 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './creategroup.component.html',
   styleUrls: ['./creategroup.component.css']
 })
-export class CreategroupComponent implements OnInit {
 
+export class CreategroupComponent implements OnInit {
+  
   constructor() { }
 
   ngOnInit(): void {

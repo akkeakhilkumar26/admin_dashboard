@@ -7,14 +7,6 @@
 }
 .create_user_main .group_card{
     min-width: 600px !important;
-    transition: all ease-in-out 0.3s;
-}
-.create_user_main .group_card:hover{
-    transform: translateY(-10px);
-    border-bottom: 1px solid #1d3557;
-}
-.user_card:hover{
-    border-bottom: 1px solid #1d3557;
 }
 .group_img img{
     height: 60px;
@@ -22,7 +14,6 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 8px;
-    padding: 2px;
     border: 2px solid #a8dadc;
 }
 .create_user_main p, .create_group_permissions p{
@@ -41,23 +32,14 @@
    margin-top: 8px;
 }
 .grouplist_crud_btns .mat-button button{
-    margin: 0px !important;
+    margin: 0px 8px !important;
     Box-shadow: 0px 0px 5px lightgrey !important;
     transition: 0.1s;
 }
-.grouplist_crud_btns button{
-    margin: 0px 6px;
-}
-.grouplist_crud_btns .btn_add{
-    color: #2b2d42;
-    background: #f8f9fa;
-}
 .grouplist_crud_btns .btn_edit{
     color: #2196f3;
-    background: #ecf3ff;
 }
 .grouplist_crud_btns .btn_del{
-    background: #fff0f3;
     color: #f44336;
 }
 .grouplist_crud_btns button:hover{

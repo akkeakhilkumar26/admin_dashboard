@@ -23,15 +23,15 @@
                     <p><a href="#">
                         <i class="bi bi-building"></i>Organisation
                     </a></p>
-                    <button mat-button><i class="bi bi-plus-circle"></i>Create organisation</button>
-                    <button class="left_nav_menu" mat-button [matMenuTriggerFor]="menu"><i class="bi bi-card-list"></i>Internal Organisation</button>
-                    <mat-menu #menu="matMenu">
-                      <button mat-menu-item>organisation1</button>
+                    <button mat-button (click)='openOrganisation()'><i class="bi bi-plus-circle"></i>Create organisation</button>
+                    <button class="left_nav_menu" mat-button [matMenuTriggerFor]="internalOrg"><i class="bi bi-card-list"></i>Internal Organisation</button>
+                    <mat-menu #internalOrg="matMenu">
+                      <button mat-menu-item (click)='openInternalorg()'>Organisation1</button>
                       <button mat-menu-item>Organisation 2</button>
                     </mat-menu> 
-                    <button mat-button [matMenuTriggerFor]="menu"><i class="bi bi-card-list"></i>External Organisation</button>
-                    <mat-menu #menu="matMenu">
-                      <button mat-menu-item>organisation 3</button>
+                    <button mat-button [matMenuTriggerFor]="externalOrg"><i class="bi bi-card-list"></i>External Organisation</button>
+                    <mat-menu #externalOrg="matMenu">
+                      <button mat-menu-item (click)='openExternalorg()'>Organisation 3</button>
                       <button mat-menu-item>Organisation 4</button>
                     </mat-menu>
                 </section>  
