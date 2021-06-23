@@ -6,13 +6,13 @@
     text-align: center;
 }
   .user_sec_main p, .user_sec_permissions p{
-      font-weight: 500; 
+      font-weight: 500;
       color: #e63946;
       margin-bottom: 20px;
   }
   .user_sec_main p span{
     border-bottom: 2px dotted #a8dadc;
-    padding-bottom: 6px; 
+    padding-bottom: 6px;
   }
   .user_profile_sec p{
     margin-top: 15px;
@@ -20,13 +20,13 @@
   .user_profile_sec
     .add_user_icon{
     border: 1px solid #2a363b;
-    height: 60px; 
+    height: 60px;
     width: 60px;
     text-align: center;
     display: inline-block;
     border-radius: 50%;
-    } 
-    
+    }
+
   .add_user_icon i{
     color: #7c7575;
   }
@@ -95,3 +95,4 @@ text-align: left;
   .add_user_section .add_user_form .add_user_can_btn{
       background: #e63946;
   }
+

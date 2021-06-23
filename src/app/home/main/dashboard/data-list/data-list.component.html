@@ -1,40 +1,70 @@
+<a routerLink='/home/add-user'>add user</a>
 <mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-  </mat-form-field>
-  
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  
-    <!-- Row shown when there is no matching data. -->
-    <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-    </tr>
-  </table>
-  <a routerLink='/home/add-user'>add user</a>
+
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="filter($event)" placeholder="Ex. ium" #input>
+</mat-form-field>
+
+<mat-paginator [pageSizeOptions]="[9,18]" showFirstLastButtons></mat-paginator>
+
+<table mat-table [dataSource]="store" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="profile">
+    <th mat-header-cell *matHeaderCellDef>Proile</th>
+    <td mat-cell *matCellDef="let element">{{element.profile}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="fname">
+    <th mat-header-cell *matHeaderCellDef>First Name</th>
+    <td mat-cell *matCellDef="let element">{{element.fname}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="lname">
+    <th mat-header-cell *matHeaderCellDef>Last Name</th>
+    <td mat-cell *matCellDef="let element">{{element.lname}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="pn">
+    <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+    <td mat-cell *matCellDef="let element">{{element.pn}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let element">{{element.email}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="groups">
+    <th mat-header-cell *matHeaderCellDef>Groups</th>
+    <td mat-cell *matCellDef="let element">{{element.groups}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="pwd">
+    <th mat-header-cell *matHeaderCellDef>Password</th>
+    <td mat-cell *matCellDef="let element">{{element.pwd}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="cpwd">
+    <th mat-header-cell *matHeaderCellDef>Confirm Password</th>
+    <td mat-cell *matCellDef="let element">{{element.cpwd}}</td>
+  </ng-container>
+
+  <ng-contaier matColumnDef="org">
+    <th mat-header-cell *matHeaderCellDef>Organization</th>
+    <td mat-cell *matCellDef="let element">{{element.org}}</td>
+  </ng-contaier>
+
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+  <tr mat-row *matRowDef="let row; columns:columns"></tr>
+
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">Not data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
+
+
