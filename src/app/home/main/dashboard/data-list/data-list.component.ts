@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
@@ -44,8 +44,8 @@ export class DataListComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
 
-  //@ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
-  //@ViewChild(MatSort, { static: true }) sort!: MatSort;
+  @ViewChild(MatSort, {static:true}) sort!:MatSort;
+  @ViewChild(MatPaginator, {static:true}) paginator!:MatPaginator;
 
   constructor(private _route: Router, private ds: DataService) {
   }
