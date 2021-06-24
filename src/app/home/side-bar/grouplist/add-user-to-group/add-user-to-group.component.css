@@ -4,9 +4,7 @@
     border-radius: 2px;
     margin: 10px 0px;
 }
-.group_img{
-    text-align: center !important;
-}
+
 .create_user_main .group_card{
     transition: all ease-in-out 0.3s;
 }
@@ -21,7 +19,9 @@
     object-fit: cover;
     margin-right: 16px;
     padding: 2px;
-    /* border: 2px solid #a8dadc; */
+}
+.user_card{
+    min-width: 450px;
 }
 .user_card:hover{
     border-bottom: 1px solid #1d3557;

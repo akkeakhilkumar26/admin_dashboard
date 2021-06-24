@@ -1,10 +1,78 @@
+.main_data_table{
+  background: #fff;
+  box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 20%);
+}
+.main_data_table span, .main_data_table .main_table_filter{
+  font-size: 18px;
+  color: #1d3557;
+}
+.main_data_table .mat-button{
+  font-size: 12px;
+}
+.main_data_table .mat-button i{
+  font-size: 16px;
+  margin-right: 8px;
+}
 table {
   width: 100%;
+  /* margin-bottom: 10px !important; */
 }
 .mat-form-field {
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
 }
-td, th {
-  width: 25%;
+table th{
+  font-weight: 500;
+  color: #2b2d42;
 }
+td, th {
+  width: 0px;
+  border-color: #e9e9e9;
+}
+tr.mat-header-row {
+  height: 40px;
+}
+tr.mat-row, tr.mat-footer-row {
+  height: 65px;
+}
+.mat-cell, .mat-footer-cell {
+  font-size: 13px;
+}
+.main_data_table .example-spacer {
+  flex: 1 1 auto;
+}
+
+/* .data_table_header{
+  padding: 10px 24px;
+  
+} */
+/* box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 20%); */
+  /* border-bottom: 1px solid #ccc; */
+button a{
+  text-decoration: none;
+  color: #2b2d42;
+}
+.grouplist_crud_btns .mat-button button{
+  margin: 0px !important;
+  Box-shadow: 0px 0px 5px lightgrey !important;
+  transition: 0.1s;
+}
+.grouplist_crud_btns button{
+  margin: 0px 6px;
+}
+.grouplist_crud_btns .btn_add{
+  color: #2b2d42;
+  background: #f8f9fa;
+}
+.grouplist_crud_btns .btn_edit{
+  color: #2196f3;
+  background: #ecf3ff;
+}
+.grouplist_crud_btns .btn_del{
+  background: #fff0f3;
+  color: #f44336;
+}
+.grouplist_crud_btns button:hover{
+  Box-shadow: 0px 0px 15px lightgray;
+}
+

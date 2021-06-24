@@ -13,6 +13,9 @@ body {
     height: 12px;
     width: 12px;
       } */
+      .mat-card-header-text {
+        margin: 0 8px !important;
+    }
       .mat-checkbox-inner-container{
         height: 13px !important;
         width: 13px !important;

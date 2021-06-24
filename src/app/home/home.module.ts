@@ -9,6 +9,12 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreategroupComponent } from './side-bar/creategroup/creategroup.component';
 import { GrouplistComponent } from './side-bar/grouplist/grouplist.component';
+import { CreateorganisationComponent } from './side-bar/createorganisation/createorganisation.component';
+import { InternalorgComponent } from './side-bar/internalorg/internalorg.component';
+import { ExternalorgComponent } from './side-bar/externalorg/externalorg.component';
+import { AddUserToGroupComponent } from './side-bar/grouplist/add-user-to-group/add-user-to-group.component';
+import { DelUserFromgroupComponent } from './side-bar/grouplist/del-user-fromgroup/del-user-fromgroup.component';
+
 
 
 
@@ -19,7 +25,12 @@ import { GrouplistComponent } from './side-bar/grouplist/grouplist.component';
     FooterComponent,
     SideBarComponent,
     CreategroupComponent,
-    GrouplistComponent
+    GrouplistComponent,
+    CreateorganisationComponent,
+    InternalorgComponent,
+    ExternalorgComponent,
+    AddUserToGroupComponent,
+    DelUserFromgroupComponent,
   ],
   imports: [
     CommonModule,
