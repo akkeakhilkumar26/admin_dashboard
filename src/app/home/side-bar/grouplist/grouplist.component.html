@@ -1,57 +1,54 @@
-    <section class="create_user_main">
-      <p><span>Group</span></p>
-      <div mat-dialog-content class="mat-typography">
-          <form>
-              <mat-card class="group_card">  
-                      <div class="row">
-                        <div class="col-4">
-                          <section class="group_img">
-                            <img src="assets\images\group_img.jpg" class="group_photo" alt="">
-                            <span>Group-A</span>
-                          </section>
-                        </div>
-                        <div class="col">
-                          <section class="grouplist_crud_btns">
-                            <!-- <mat-radio-group [(ngModel)]="labelPosition">
+<section class="create_user_main">
+  <p><span>Group</span></p>
+  <div mat-dialog-content class="mat-typography">
+    <form>
+      <mat-card class="group_card">
+        <div class="row">
+          <div class="col-4">
+            <section class="group_img">
+              <img src="assets\images\group_img.jpg" class="group_photo" alt="">
+              <span>Group-A</span>
+            </section>
+          </div>
+          <div class="col">
+            <section class="grouplist_crud_btns">
+              <!-- <mat-radio-group [(ngModel)]="labelPosition">
                               <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
                               <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
                             </mat-radio-group> -->
-                            <button mat-button class="btn_add" (click)='openDialog()' ><i class="bi bi-person-plus"></i></button> 
-                            <button mat-button class="btn_edit"> <i class="bi bi-pencil-square"></i></button>
-                            <button mat-button class="btn_del" (click)='delDialog()'><i class="bi bi-trash"></i></button>
-                          </section>
-                        </div>
-                      </div>
-                </mat-card>     
-                  <section class="create_group_main">
-                    <mat-form-field [floatLabel]="'never'">
-                        <input matInput placeholder="search for users">
-                        <mat-icon matSuffix>search</mat-icon>
-                      </mat-form-field>
-                      <p><span style="color: #1d3557;">Members - 6</span></p>
-                      <mat-card class="user_card">
-                 <img src="assets\images\user_profile.jpg" alt="">
-                 <span>user name</span>
-                 <button mat-raised-button><i class="bi bi-dash"></i> Remove</button>
-                      </mat-card>
-                      <mat-card class="user_card">
-               <img src="assets\images\user_profile.jpg" alt="">
-               <span>user name</span>
-                <button mat-raised-button><i class="bi bi-dash"></i> Removed</button>
-                      </mat-card>
-                      <mat-card class="user_card">
-               <img src="assets\images\user_profile.jpg" alt="">
-               <span>user name</span>
-                <button mat-raised-button><i class="bi bi-dash"></i> Removed</button>
-                      </mat-card>
-                  </section>
-                     <p class="create_group_btn">
-                      <button mat-raised-button class="create_btn">
-                         <a href="#">Done</a></button>
-                      </p>   
-          </form>
-      </div>
-    </section>
-
-
-  
+              <button mat-button class="btn_add" (click)='openDialog()'><i class="bi bi-person-plus"></i></button>
+              <button mat-button class="btn_edit"> <i class="bi bi-pencil-square"></i></button>
+              <button mat-button class="btn_del" (click)='delDialog()'><i class="bi bi-trash"></i></button>
+            </section>
+          </div>
+        </div>
+      </mat-card>
+      <section class="create_group_main">
+        <mat-form-field [floatLabel]="'never'">
+          <input matInput placeholder="search for users">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <p><span style="color: #1d3557;">Members - 6</span></p>
+        <mat-card class="user_card">
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-dash"></i> Remove</button>
+        </mat-card>
+        <mat-card class="user_card">
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-dash"></i> Removed</button>
+        </mat-card>
+        <mat-card class="user_card">
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-dash"></i> Removed</button>
+        </mat-card>
+      </section>
+      <p class="create_group_btn">
+        <button mat-raised-button class="create_btn">
+          <a href="#">Done</a></button>
+      </p>
+    </form>
+  </div>
+</section>

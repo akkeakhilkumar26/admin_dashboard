@@ -1,56 +1,57 @@
-  <section class="create_user_main">
-    <p><span>Create Group</span></p>
-    <div mat-dialog-content class="mat-typography">
-        <form>
-            <mat-card class="group_card">
-                      <section class="group_img">
-                        <img src="assets\images\group_img.jpg" class="group_photo" alt="">
-                        <mat-form-field [floatLabel]="'never'">
-                          <input matInput placeholder="Group Name">
-                        </mat-form-field>
-                      </section>
-              </mat-card>     
-                <section class="create_group_main">
-                  <mat-form-field [floatLabel]="'never'" style="width: 100%;">
-                      <input matInput placeholder="search for users">
-                      <mat-icon matSuffix>search</mat-icon>
-                    </mat-form-field>
-                    <mat-card class="user_card">
-               <img src="assets\images\user_profile.jpg" alt="">
-               <span>user name</span>
-               <button mat-raised-button><i class="bi bi-plus fa-2x"></i> Add user</button>
-                    </mat-card>
-                    <mat-card class="user_card">
-             <img src="assets\images\user_profile.jpg" alt=""> 
-             <span>user name</span>
-              <button mat-raised-button><i class="bi bi-check"></i> Added</button>
-                    </mat-card>
-                </section>
-                <section class="create_group_main">
-                  <div class="row">
-                    <div class="col">
-                      <section class="create_group_permissions">
-                        <p><span>Permissions</span></p>
-                        <div>
-                          <mat-checkbox> has permission to access the entire group user has permission to access the entire group</mat-checkbox>
-                        </div>
-                        <div>
-                          <mat-checkbox>user has permission to access the entire group user has permission to access the entire group</mat-checkbox>
-                        </div>
-                        <div>
-                          <mat-checkbox>user has permission to access the entire group user has permission to access the entire group</mat-checkbox>
-                        </div>
-                        </section>
-                    </div>
-                  </div>
-                   </section>
-                   <section class="create_group_btn">
-                    <button mat-raised-button class="create_btn">
-                       <a href="#"> Create</a></button>
-                    <button mat-raised-button class="cancel_btn">Cancel</button>
-                   </section>                 
-        </form>
-    </div>
-  </section>
-
-  
+<section class="create_user_main">
+  <p><span>Create Group</span></p>
+  <div mat-dialog-content class="mat-typography">
+    <form>
+      <mat-card class="group_card">
+        <section class="group_img">
+          <img src="assets\images\group_img.jpg" class="group_photo" alt="">
+          <mat-form-field [floatLabel]="'never'">
+            <input matInput placeholder="Group Name">
+          </mat-form-field>
+        </section>
+      </mat-card>
+      <section class="create_group_main">
+        <mat-form-field [floatLabel]="'never'" style="width: 100%;">
+          <input matInput placeholder="search for users">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <mat-card class="user_card">
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-plus fa-2x"></i> Add user</button>
+        </mat-card>
+        <mat-card class="user_card">
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-check"></i> Added</button>
+        </mat-card>
+      </section>
+      <section class="create_group_main">
+        <div class="row">
+          <div class="col">
+            <section class="create_group_permissions">
+              <p><span>Permissions</span></p>
+              <div>
+                <mat-checkbox> has permission to access the entire group user has permission to access the entire group
+                </mat-checkbox>
+              </div>
+              <div>
+                <mat-checkbox>user has permission to access the entire group user has permission to access the entire
+                  group</mat-checkbox>
+              </div>
+              <div>
+                <mat-checkbox>user has permission to access the entire group user has permission to access the entire
+                  group</mat-checkbox>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="create_group_btn">
+        <button mat-raised-button class="create_btn">
+          <a href="#"> Create</a></button>
+        <button mat-raised-button class="cancel_btn">Cancel</button>
+      </section>
+    </form>
+  </div>
+</section>

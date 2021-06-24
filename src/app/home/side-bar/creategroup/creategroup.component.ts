@@ -12,7 +12,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 
 export class CreategroupComponent implements OnInit {
-  
+
   constructor() { }
 
   ngOnInit(): void {

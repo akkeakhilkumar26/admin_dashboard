@@ -1,72 +1,72 @@
 <section class="create_user_main">
-    <p mat-dialog-title><span>Create Organisation</span></p>
-    <div mat-dialog-content class="mat-typography">
-        <form>
-            <mat-card class="group_card">
-                <div class="row">
-                    <div class="col-6">
-                        <section class="group_img">
-                            <img src="assets\images\group_img.jpg" class="group_photo" alt="">
-                            <mat-form-field [floatLabel]="'never'">
-                              <input matInput placeholder="Organisation Name">
-                            </mat-form-field>
-                          </section>
-                    </div>
-                    <div class="col">
-                        <section class="example-section">
-                            <mat-radio-group [(ngModel)]="labelPosition">
-                              <mat-radio-button class="example-margin" value="after">Internal</mat-radio-button>
-                              <mat-radio-button class="example-margin" value="before">External</mat-radio-button>
-                            </mat-radio-group>
-                          </section>
-                    </div>
-                </div>        
-              </mat-card>     
-                <section class="create_group_main">
-                  <mat-form-field [floatLabel]="'never'" style="width: 100%;">
-                      <input matInput placeholder="search for users">
-                      <mat-icon matSuffix>search</mat-icon>
-                    </mat-form-field>
-                    <mat-card class="user_card">
-                      <span class="internal_user"></span>
-               <img src="assets\images\user_profile.jpg" alt="">
-               <span>user name</span>
-               <button mat-raised-button><i class="bi bi-plus fa-2x"></i> Add user</button>
-                    </mat-card>
-                    <mat-card class="user_card">
-               <span class="external_user"></span>
-               <img src="assets\images\user_profile.jpg" alt="">
-               <span>user name</span>
-               <button mat-raised-button><i class="bi bi-plus fa-2x"></i> Add user</button>
-                    </mat-card>
-                    <mat-card class="user_card">
-             <img src="assets\images\user_profile.jpg" alt="">
-             <span>user name</span>
-              <button mat-raised-button><i class="bi bi-check"></i> Added</button>
-                    </mat-card>
-                </section>
-                <section class="create_group_main">
-                  <section class="create_group_permissions">
-                  <p><span>Permissions</span></p>
-                  <div>
-                    <mat-checkbox> has permission to access the entire group user has permission to access the entire group</mat-checkbox>
-                  </div>
-                  <div>
-                    <mat-checkbox>user has permission to access the entire group user has permission to access the entire group</mat-checkbox>
-                  </div>
-                  <div>
-                    <mat-checkbox>user has permission to access the entire group user has permission to access the entire group</mat-checkbox>
-                  </div>
-                  </section>
-                   </section>
-                   <section class="create_group_btn">
-                    <button mat-raised-button class="create_btn">
-                       <a href="#"> Create</a></button>
-                    <button mat-raised-button class="cancel_btn">Cancel</button>
-                   </section>
-        </form>
-    </div>
-  </section>
-
-  
-
+  <p mat-dialog-title><span>Create Organisation</span></p>
+  <div mat-dialog-content class="mat-typography">
+    <form>
+      <mat-card class="group_card">
+        <div class="row">
+          <div class="col-6">
+            <section class="group_img">
+              <img src="assets\images\group_img.jpg" class="group_photo" alt="">
+              <mat-form-field [floatLabel]="'never'">
+                <input matInput placeholder="Organisation Name">
+              </mat-form-field>
+            </section>
+          </div>
+          <div class="col">
+            <section class="example-section">
+              <mat-radio-group [(ngModel)]="labelPosition">
+                <mat-radio-button class="example-margin" value="after">Internal</mat-radio-button>
+                <mat-radio-button class="example-margin" value="before">External</mat-radio-button>
+              </mat-radio-group>
+            </section>
+          </div>
+        </div>
+      </mat-card>
+      <section class="create_group_main">
+        <mat-form-field [floatLabel]="'never'" style="width: 100%;">
+          <input matInput placeholder="search for users">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <mat-card class="user_card">
+          <span class="internal_user"></span>
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-plus fa-2x"></i> Add user</button>
+        </mat-card>
+        <mat-card class="user_card">
+          <span class="external_user"></span>
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-plus fa-2x"></i> Add user</button>
+        </mat-card>
+        <mat-card class="user_card">
+          <img src="assets\images\user_profile.jpg" alt="">
+          <span>user name</span>
+          <button mat-raised-button><i class="bi bi-check"></i> Added</button>
+        </mat-card>
+      </section>
+      <section class="create_group_main">
+        <section class="create_group_permissions">
+          <p><span>Permissions</span></p>
+          <div>
+            <mat-checkbox> has permission to access the entire group user has permission to access the entire group
+            </mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox>user has permission to access the entire group user has permission to access the entire group
+            </mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox>user has permission to access the entire group user has permission to access the entire group
+            </mat-checkbox>
+          </div>
+        </section>
+      </section>
+      <section class="create_group_btn">
+        <button mat-raised-button class="create_btn">
+          <a href="#"> Create</a></button>
+        <button mat-raised-button class="cancel_btn">Cancel</button>
+      </section>
+    </form>
+  </div>
+</section>

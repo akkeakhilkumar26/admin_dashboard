@@ -45,14 +45,14 @@
     .left_nav button i{
       margin-right: 5px;
     }
-    .left_nav_sec button{
+    .left_nav_sec  button{
       border: 1px solid #ccc;
       width: 100%;
       text-align: left;
-      font-size: 12px;
+      font-size: 12px !important;
       border-left: 8px solid #1d3557;
       border-radius: 0px 20px 20px 0px;
-      line-height: 30px;
+      line-height: 28px;
       margin-bottom: 12px;
       font-weight: normal;
     }

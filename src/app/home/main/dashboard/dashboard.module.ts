@@ -7,14 +7,16 @@ import { DataListComponent } from './data-list/data-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { MaterialModule } from 'src/app/material/material.module';
-
-
+import { UserViewComponent } from './data-list/user-view/user-view.component';
+import { UserDeleteComponent } from './data-list/user-delete/user-delete.component';
 
 @NgModule({
   declarations: [
     DataListComponent,
     DashboardComponent,
-    AddUserComponent
+    AddUserComponent,
+    UserViewComponent,
+    UserDeleteComponent
   ],
   imports: [
     CommonModule,

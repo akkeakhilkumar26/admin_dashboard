@@ -21,11 +21,11 @@ export class GrouplistComponent implements OnInit {
     });
   }
 
-delDialog(){
-  this.dialog.open(DelUserFromgroupComponent, {
-    data: {
-      animal: 'panda'
-    }
-  });
-}
+  delDialog() {
+    this.dialog.open(DelUserFromgroupComponent, {
+      data: {
+        animal: 'panda'
+      }
+    });
+  }
 }

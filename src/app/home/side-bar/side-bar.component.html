@@ -1,39 +1,40 @@
-
-        <div class="left_nav_main">
-            <section class="left_nav">
-                <h4>Dashboard</h4>
-                <section class="left_nav_sec">
-                    <p><a href="#">
-                        <i class="bi bi-person"></i>Users
-                    </a></p>
-                    <button mat-button  class="left_nav_btn"><i class="bi bi-slash-circle"></i>Block</button>
-                </section>
-                <section class="left_nav_sec">
-                    <p><a href="#">
-                        <i class="bi bi-people"></i>Groups
-                    </a></p>
-                    <button mat-button (click)='openDialog()'><i class="bi bi-plus-circle"></i>Create group</button>
-                    <button mat-button [matMenuTriggerFor]="grouplist" #menuTrigger><i class="bi bi-card-list"></i>Group list</button>
-                    <mat-menu #grouplist="matMenu">
-                        <button mat-menu-item (click)="openGroup()">Group-A</button>
-                        <button mat-menu-item (click)="openGroup()">Group-B</button>
-                    </mat-menu> 
-                </section>
-                <section class="left_nav_sec">
-                    <p><a href="#">
-                        <i class="bi bi-building"></i>Organisation
-                    </a></p>
-                    <button mat-button (click)='openOrganisation()'><i class="bi bi-plus-circle"></i>Create organisation</button>
-                    <button class="left_nav_menu" mat-button [matMenuTriggerFor]="internalOrg"><i class="bi bi-card-list"></i>Internal Organisation</button>
-                    <mat-menu #internalOrg="matMenu">
-                      <button mat-menu-item (click)='openInternalorg()'>Communications</button>
-                      <button mat-menu-item>Navigation</button>
-                    </mat-menu> 
-                    <button mat-button [matMenuTriggerFor]="externalOrg"><i class="bi bi-card-list"></i>External Organisation</button>
-                    <mat-menu #externalOrg="matMenu">
-                      <button mat-menu-item (click)='openExternalorg()'>Spice jet</button>
-                      <button mat-menu-item>Air india</button>
-                    </mat-menu>
-                </section>  
-            </section>
-        </div>
+<div class="left_nav_main">
+  <section class="left_nav">
+    <h4>Dashboard</h4>
+    <section class="left_nav_sec">
+      <p><a href="#">
+          <i class="bi bi-person"></i>Users
+        </a></p>
+      <button mat-button class="left_nav_btn"><i class="bi bi-slash-circle"></i>Block</button>
+      <button mat-button class="left_nav_btn"><i class="bi bi-chat-square-text"></i>User Requests</button>
+    </section>
+    <section class="left_nav_sec">
+      <p><a href="#">
+          <i class="bi bi-people"></i>Groups
+        </a></p>
+      <button mat-button (click)='openDialog()'><i class="bi bi-plus-circle"></i>Create group</button>
+      <button mat-button [matMenuTriggerFor]="grouplist" #menuTrigger><i class="bi bi-card-list"></i>Group list</button>
+      <mat-menu #grouplist="matMenu">
+        <button mat-menu-item (click)="openGroup()">Group-A</button>
+        <button mat-menu-item (click)="openGroup()">Group-B</button>
+      </mat-menu>
+    </section>
+    <section class="left_nav_sec">
+      <p><a href="#">
+          <i class="bi bi-building"></i>Organisation
+        </a></p>
+      <button mat-button (click)='openOrganisation()'><i class="bi bi-plus-circle"></i>Create organisation</button>
+      <button class="left_nav_menu" mat-button [matMenuTriggerFor]="internalOrg"><i class="bi bi-card-list"></i>Internal
+        Organisation</button>
+      <mat-menu #internalOrg="matMenu">
+        <button mat-menu-item (click)='openInternalorg()'>Communications</button>
+        <button mat-menu-item>Navigation</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="externalOrg"><i class="bi bi-card-list"></i>External Organisation</button>
+      <mat-menu #externalOrg="matMenu">
+        <button mat-menu-item (click)='openExternalorg()'>Spice jet</button>
+        <button mat-menu-item>Air india</button>
+      </mat-menu>
+    </section>
+  </section>
+</div>

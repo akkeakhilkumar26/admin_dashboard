@@ -1,13 +1,33 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { DataService } from 'src/app/core/services/data.service';
+import { UserDeleteComponent } from './user-delete/user-delete.component';
+import { UserViewComponent } from './user-view/user-view.component';
 import { Structure } from 'src/app/core/models/structure';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
+import { DataService } from 'src/app/core/services/data.service';
 
 
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  action: string;
+  email: string;
+  department: string;
+}
 
+const ELEMENT_DATA: PeriodicElement[] = [
+  { position: 1, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'Li' },
+  { position: 2, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'He' },
+  { position: 3, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'H' },
+  { position: 4, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'Be' },
+  { position: 5, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'B' },
+  { position: 6, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'C' },
+  { position: 7, name: 'UserName', email: 'abcd@gmail.com', department: 'communications', weight: 9876543219, action: 'C' },
+];
 @Component({
   selector: 'app-data-list',
   templateUrl: './data-list.component.html',
@@ -21,9 +41,11 @@ export class DataListComponent implements OnInit {
 
   columns: string[] = ['id', 'name', 'pn', 'email', 'action'];
 
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
-  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
-  @ViewChild(MatSort, { static: true }) sort!: MatSort;
+
+  //@ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  //@ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   constructor(private _route: Router, private ds: DataService) {
   }
@@ -70,8 +92,8 @@ export class DataListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.store.paginator = this.paginator; //Pagination
-    this.store.sort = this.sort; // Sort
+    //this.store.paginator = this.paginator; //Pagination
+    //this.store.sort = this.sort; // Sort
 
     this.ds.details().subscribe(
       data => {
@@ -88,3 +110,5 @@ export class DataListComponent implements OnInit {
   }
 
 }
+
+

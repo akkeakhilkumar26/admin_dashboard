@@ -6,10 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 
-import { Structure } from '../app/core/models/structure';
-
-import { DataService } from '../app/core/services/data.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +18,7 @@ import { DataService } from '../app/core/services/data.service';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [DataService, Structure],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

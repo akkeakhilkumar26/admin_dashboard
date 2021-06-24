@@ -14,7 +14,7 @@ import { InternalorgComponent } from './internalorg/internalorg.component';
 export class SideBarComponent implements OnInit {
   menuTrigger: any;
 
-  constructor(public dialog: MatDialog) { 
+  constructor(public dialog: MatDialog) {
     // openDialog() {
     //   this.dialog.open();
     // }
@@ -25,15 +25,15 @@ export class SideBarComponent implements OnInit {
     // Manually restore focus to the menu trigger since the element that
     // opens the dialog won't be in the DOM any more when the dialog closes.
   }
-  openInternalorg(){
-    this.dialog.open(InternalorgComponent,{
+  openInternalorg() {
+    this.dialog.open(InternalorgComponent, {
       data: {
         animal: 'panda'
-      } 
+      }
     });
   }
   openExternalorg() {
-    this.dialog.open(ExternalorgComponent,{
+    this.dialog.open(ExternalorgComponent, {
       data: {
         animal: 'panda'
       }
@@ -46,13 +46,13 @@ export class SideBarComponent implements OnInit {
       }
     });
   }
-openOrganisation(){
-  this.dialog.open(CreateorganisationComponent, {
-    data: {
-      animal: 'panda'
-    }
-  });
-}
+  openOrganisation() {
+    this.dialog.open(CreateorganisationComponent, {
+      data: {
+        animal: 'panda'
+      }
+    });
+  }
   ngOnInit(): void {
   }
 
