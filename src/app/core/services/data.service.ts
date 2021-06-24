@@ -9,7 +9,7 @@ import { Structure } from '../models/structure';
 })
 export class DataService {
 
-  url = "http://localhost:5555";
+  url = "http://localhost:5555/user_details";
 
   constructor(private http: HttpClient) {
 
@@ -21,6 +21,10 @@ export class DataService {
 
   send(temp: Structure): Observable<any> {
     return this.http.post("http://localhost:5555/user_details", temp)
+  }
+
+  delete(id:any):Observable<any>{
+    return this.http.delete(`${this.url}/${id}`);
   }
 
 }

@@ -86,34 +86,26 @@ export class AddUserComponent implements OnInit {
   /* Post Method*/
   add = (): any => {
 
+    let temp = new Structure();
 
-    if (this.store.findIndex((element: any) => element.id === this.user.controls['id']) === -1) {
+    temp.profile = this.user.controls['profile'].value;
+    temp.id = this.user.controls['id'].value;
+    temp.fname = this.user.controls['fname'].value;
+    temp.lname = this.user.controls['lname'].value;
+    temp.pn = this.user.controls['pn'].value;
+    temp.email = this.user.controls['email'].value;
+    temp.groups = this.user.controls['groups'].value;
+    temp.pwd = this.user.controls['pwd'].value;
+    temp.cpwd = this.user.controls['cpwd'].value;
+    temp.org = this.user.controls['org'].value;
 
-      let temp = new Structure();
-
-      temp.profile = this.user.controls['profile'].value;
-      temp.id = this.user.controls['id'].value;
-      temp.fname = this.user.controls['fname'].value;
-      temp.lname = this.user.controls['lname'].value;
-      temp.pn = this.user.controls['pn'].value;
-      temp.email = this.user.controls['email'].value;
-      temp.groups = this.user.controls['groups'].value;
-      temp.pwd = this.user.controls['pwd'].value;
-      temp.cpwd = this.user.controls['cpwd'].value;
-      temp.org = this.user.controls['org'].value;
-
-      this.ds.send(temp).subscribe(
-        data => {
-          console.log(data);
-          alert("Successfully added");
-        }
-      )
-      this.user.reset();
-    }
-
-    else {
-      alert("Id is Already use");
-    }
+    this.ds.send(temp).subscribe(
+      data => {
+        console.log(data);
+        alert("Successfully added");
+      }
+    )
+    this.user.reset();
   }
 
   cancel = (): void => {

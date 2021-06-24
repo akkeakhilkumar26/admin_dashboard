@@ -7,24 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  action: string;
-  email:string;
-  department:string;
-}
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'Li'},
-  {position: 2, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'He'},
-  {position: 3, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'H'},
-  {position: 4, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'Be'},
-  {position: 5, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'B'},
-  {position: 6, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'C'},
-  {position: 7, name: 'UserName',email:'abcd@gmail.com',department:'communications',weight: 9876543219, action: 'C'},
-];
 @Component({
   selector: 'app-data-list',
   templateUrl: './data-list.component.html',
@@ -33,17 +16,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 
 export class DataListComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name','email','department', 'weight', 'action'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   store = new MatTableDataSource<Structure>();
+
+  columns: string[] = ['id', 'name', 'pn', 'email', 'action'];
 
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
-
-
-  columns: string[] = ['profile', 'id', 'fname', 'lname', 'pn', 'email', 'groups', 'pwd', 'cpwd', 'org'];
 
   constructor(private _route: Router, private ds: DataService) {
   }
@@ -55,6 +35,37 @@ export class DataListComponent implements OnInit {
     this.store.filter = filterValue.trim().toLowerCase();
   }
 
+  /*get data*/
+
+  display = (): any => {
+    this.ds.details().subscribe(
+      data => {
+        this.store = data;
+      }
+    )
+  }
+
+  /*Delete*/
+
+  delete = (index: any): any => {
+    let result = confirm("Are you sure delete the record");
+
+    if (result == true) {
+      this.ds.delete(index).subscribe(
+        data => {
+          alert("Successfully deleted the record");
+          console.log(data);
+
+          this.display();
+        }
+      )
+    }
+
+    else {
+      alert('record aborted');
+    }
+
+  }
 
 
   ngOnInit(): void {
@@ -69,6 +80,8 @@ export class DataListComponent implements OnInit {
       }
     )
   }
+
+
 
   goTo() {
     this._route.navigate(['/home/add-user'])
