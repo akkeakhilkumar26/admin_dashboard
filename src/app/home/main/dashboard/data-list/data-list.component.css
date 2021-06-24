@@ -75,7 +75,7 @@ button a{
   color: #f44336;
 }
 .grouplist_crud_btns .btn_newitems{
-  color: lightgray;
+  color: gray;
 }
 .grouplist_crud_btns button:hover{
   Box-shadow: 0px 0px 15px lightgray;
