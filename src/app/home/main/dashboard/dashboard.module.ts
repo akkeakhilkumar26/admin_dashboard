@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { MaterialModule } from 'src/app/material/material.module';
 
+
+
 @NgModule({
   declarations: [
     DataListComponent,
