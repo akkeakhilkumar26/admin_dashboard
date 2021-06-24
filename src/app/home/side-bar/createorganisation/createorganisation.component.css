@@ -4,24 +4,29 @@
     border-radius: 2px;
     margin: 10px 0px;
 }
-.group_img{
-    text-align: center !important;
-}
-.create_user_main .group_card{
-    transition: all ease-in-out 0.3s;
-}
-.create_user_main .group_card:hover{
-    transform: translateY(-10px);
-    border-bottom: 1px solid #1d3557;
-}
 .group_img img{
     height: 60px;
     width: 60px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 16px;
-    padding: 2px;
-    /* border: 2px solid #a8dadc; */
+}
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: 21px !important;
+}
+  .example-margin {
+    margin: 0 10px;
+  }
+  .create_user_main .group_card{
+    min-width: 600px !important;
+    transition: all ease-in-out 0.3s;
+}
+.create_user_main .group_card:hover{
+    transform: translateY(-10px);
+    border-bottom: 1px solid #1d3557;
 }
 .user_card:hover{
     border-bottom: 1px solid #1d3557;
@@ -39,7 +44,12 @@
 .create_group_main .mat-card{
     margin: 8px 0px;
 }
+.create_user_main .create_group_main .mat-card{
+    position: relative;
+}
 .create_user_main .create_group_main .mat-card img{
+    bottom: 15px;
+    left: 50px;
     width: 45px;
     height: 45px;
     object-fit: cover; 
@@ -72,4 +82,16 @@ mat-card-header-text {
 }
 .create_group_btn .cancel_btn{
 background: #e63946;
+}
+.create_user_main .create_group_main .mat-card .internal_user,.create_user_main .create_group_main .mat-card .external_user{
+  position: absolute;
+  bottom: 16px;
+  height: 12px;
+  width: 12px;
+  background-color: #a8dadc;
+  border-radius: 50%;
+  display: inline-block;
+}
+.create_user_main .create_group_main .mat-card .external_user{
+    background-color: #457b9d;  
 }

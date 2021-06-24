@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreategroupComponent } from './creategroup/creategroup.component';
+import { CreateorganisationComponent } from './createorganisation/createorganisation.component';
+import { ExternalorgComponent } from './externalorg/externalorg.component';
 import { GrouplistComponent } from './grouplist/grouplist.component';
+import { InternalorgComponent } from './internalorg/internalorg.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -17,16 +20,24 @@ export class SideBarComponent implements OnInit {
     // }
   }
   openGroup() {
-    const dialogRef = this.dialog.open(GrouplistComponent, {
-    width: '45%',
-    height: '80%',
-    maxWidth: '100vw',
-    maxHeight: '100vh',
-    });
+    const dialogRef = this.dialog.open(GrouplistComponent);
 
     // Manually restore focus to the menu trigger since the element that
     // opens the dialog won't be in the DOM any more when the dialog closes.
-    dialogRef.afterClosed().subscribe(() => this.menuTrigger.focus());
+  }
+  openInternalorg(){
+    this.dialog.open(InternalorgComponent,{
+      data: {
+        animal: 'panda'
+      } 
+    });
+  }
+  openExternalorg() {
+    this.dialog.open(ExternalorgComponent,{
+      data: {
+        animal: 'panda'
+      }
+    });
   }
   openDialog() {
     this.dialog.open(CreategroupComponent, {
@@ -35,8 +46,13 @@ export class SideBarComponent implements OnInit {
       }
     });
   }
-
-
+openOrganisation(){
+  this.dialog.open(CreateorganisationComponent, {
+    data: {
+      animal: 'panda'
+    }
+  });
+}
   ngOnInit(): void {
   }
 
