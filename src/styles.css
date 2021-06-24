@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+     height: 100%;
+     }
+body {
+     margin: 0;
+      font-family: Roboto, "Helvetica Neue", sans-serif; 
+    }
+/* .add_user_section .user_sec_permissions .mat-checkbox-label{
+    font-size: 12px !important;
+}
+.add_user_section .user_sec_permissions .mat-checkbox-inner-container{
+    height: 12px;
+    width: 12px;
+      } */
+      .mat-card-header-text {
+        margin: 0 8px !important;
+    }
+      .mat-checkbox-inner-container{
+        height: 13px !important;
+        width: 13px !important;
+      }
+      .mat-checkbox-label{
+        font-size: 13px !important;
+    }

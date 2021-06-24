@@ -1,0 +1,75 @@
+.create_group_main{
+    border: 2px dotted #a8dadc !important;
+    padding: 16px !important;
+    border-radius: 2px;
+    margin: 10px 0px;
+}
+.group_img{
+    text-align: center !important;
+}
+.create_user_main .group_card{
+    transition: all ease-in-out 0.3s;
+}
+.create_user_main .group_card:hover{
+    transform: translateY(-10px);
+    border-bottom: 1px solid #1d3557;
+}
+.group_img img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+    padding: 2px;
+    /* border: 2px solid #a8dadc; */
+}
+.user_card:hover{
+    border-bottom: 1px solid #1d3557;
+}
+.create_user_main p, .create_group_permissions p{
+    font-weight: 500; 
+    color: #e63946;
+    margin-bottom: 20px;
+}
+.create_user_main p span{
+  border-bottom: 2px dotted #a8dadc;
+  padding-bottom: 6px; 
+  font-size: 13px !important;
+}
+.create_group_main .mat-card{
+    margin: 8px 0px;
+}
+.create_user_main .create_group_main .mat-card img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover; 
+    border-radius: 50%;
+     margin-right: 8px;
+}
+mat-card-header-text {
+    margin: 0 8px !important;
+}
+.create_user_main .mat-card button, .create_group_btn button{
+    float: right;
+    font-size: 12px;
+    background: #457b9d;
+    color: #fff;
+    line-height: 2;
+    margin-top: 6px;
+}
+.create_user_main .mat-card button i{
+    font-size: 16px;
+}
+.create_group_btn button a{
+    text-decoration: none;
+    color: #fff;
+}
+.create_group_btn button{
+    margin: 0px 8px;
+}
+.create_group_btn .create_btn{
+  background:  #1d3557;
+}
+.create_group_btn .cancel_btn{
+background: #e63946;
+}

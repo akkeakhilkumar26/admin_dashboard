@@ -1,0 +1,111 @@
+        <div class="add_user_section">
+          <mat-card>
+            <form  class="add_user_form" action="">
+            <section class="user_sec_main">
+              <p><span>User Details</span></p>
+              <section class="user_profile_sec">
+                <input type="file" id="profile_upload">
+              <div class="add_user_icon">
+                <i class="bi bi-upload"></i>
+            </div>   
+        <p><button mat-button>upload photo</button> </p>    
+          </section>
+          <section class="add_user_form_field">
+              <div class="row">
+                <div class="col-sm-3">
+                  <mat-form-field>
+                  <input matInput type="text" placeholder="Enter Id">
+                </mat-form-field>
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-4">
+                  <mat-form-field>
+                  <input matInput type="text" placeholder="First Name">
+                  </mat-form-field>
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-4">
+                  <mat-form-field>
+                  <input matInput type="text" placeholder="Last Name">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <mat-form-field>
+                  <input matInput type="text" placeholder="Enter Phone number">
+                  <!-- <mat-icon matSuffix> phone</mat-icon> -->
+                </mat-form-field>
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-4">
+                  <mat-form-field>
+                  <input matInput type="email" placeholder="Enter Mail">
+                  </mat-form-field>
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-4">
+                  <mat-form-field>
+                    <mat-label>Groups</mat-label>
+                    <mat-select>
+                      <mat-option value="option">Group-A</mat-option>
+                      <mat-option value="option">Group-A</mat-option>
+                      <mat-option value="option">Group-B</mat-option>
+                      <mat-option >none</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <mat-form-field>
+                  <input matInput placeholder="Password">
+                </mat-form-field>
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-4">
+                  <mat-form-field>
+                  <input matInput placeholder="Confirm Password">
+                  </mat-form-field>
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-4">
+                  <mat-form-field>
+                    <mat-label>Choose Organisation</mat-label>
+                    <mat-select>
+                      <mat-option value="option">Internal</mat-option>
+                      <mat-option value="option">External</mat-option>
+                      <mat-option >none</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+          </section>
+          <section class="user_sec_main">
+            <div class="row">
+              <div class="col-sm-12">
+          <section class="user_sec_permissions">
+          <p><span>Permissions</span></p>
+          <div>
+            <mat-checkbox> has permission to access the entire group user has permission to access the entire group</mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox>user has permission to access the entire group user has permission to access the entire group</mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox>user has permission to access the entire group user has permission to access the entire group</mat-checkbox>
+          </div>
+          </section>
+              </div>
+          </div>
+           </section>
+           <section class="add_user_btns">
+              <button mat-button class="add_user_can_btn">
+                 <a href="#">cancel</a></button>
+              <button mat-button class="add_user_sub_btn">
+                 <a href="#"> submit</a></button>
+           </section>
+            </section>
+          </form>
+          </mat-card>
+      </div>

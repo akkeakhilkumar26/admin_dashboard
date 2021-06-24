@@ -1,0 +1,105 @@
+.create_group_main{
+    border: 2px dotted #a8dadc !important;
+    padding: 16px !important;
+    border-radius: 2px;
+    margin: 16px 0px;
+    width: 100% !important;
+}
+.create_user_main .group_card{
+    min-width: 600px !important;
+    transition: all ease-in-out 0.3s;
+}
+.create_user_main .group_card:hover{
+    transform: translateY(-10px);
+    border-bottom: 1px solid #1d3557;
+}
+.user_card:hover{
+    border-bottom: 1px solid #1d3557;
+}
+.group_img img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    padding: 2px;
+    border: 2px solid #a8dadc;
+}
+.create_user_main p, .create_group_permissions p{
+    font-weight: 500; 
+    color: #e63946;
+    margin-bottom: 20px;
+}
+.create_user_main .create_group_main .mat-form-field{
+    width: 100%;
+}
+.create_user_main .mat-card .mat-card-header  h4{
+    margin: 10px 0px !important;
+}
+.grouplist_crud_btns {
+   text-align: right;
+   margin-top: 8px;
+}
+.grouplist_crud_btns .mat-button button{
+    margin: 0px !important;
+    Box-shadow: 0px 0px 5px lightgrey !important;
+    transition: 0.1s;
+}
+.grouplist_crud_btns button{
+    margin: 0px 6px;
+}
+.grouplist_crud_btns .btn_add{
+    color: #2b2d42;
+    background: #f8f9fa;
+}
+.grouplist_crud_btns .btn_edit{
+    color: #2196f3;
+    background: #ecf3ff;
+}
+.grouplist_crud_btns .btn_del{
+    background: #fff0f3;
+    color: #f44336;
+}
+.grouplist_crud_btns button:hover{
+    Box-shadow: 0px 0px 15px lightgray;
+}  
+.create_user_main 
+.create_group_main p span{
+  border-bottom: 2px dotted #a8dadc;
+  padding-bottom: 6px; 
+  font-size: 13px !important;
+}
+.create_group_main .mat-card{
+    margin: 16px 0px;
+}
+.create_user_main .create_group_main .mat-card img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover; 
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.create_user_main .create_group_main .mat-card button, .create_group_btn  button{
+    float: right;
+    font-size: 12px;
+    background: #f73859;
+    color: #fff;
+    line-height: 2;
+    margin-top: 6px;
+}
+.create_group_btn button{
+    margin: 0px 8px;
+}
+.create_group_btn .create_btn{
+  background:  #1d3557;
+}
+/* .create_group_btn .cancel_btn{
+background: #e63946;
+}  */
+.create_user_main .mat-card button i{
+    font-size: 16px;
+}
+.create_group_btn button a{
+    text-decoration: none;
+    color: #fff;
+}
