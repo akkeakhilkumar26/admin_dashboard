@@ -1,14 +1,21 @@
 <div class="add_user_section">
   <mat-card>
     <form [formGroup]="user" class="add_user_form" action="">
+
       <section class="user_sec_main">
         <p><span>User Details</span></p>
         <section class="user_profile_sec">
-          <input type="file" id="profile_upload" formControlName="profile" accept=".png,.jpeg,.jpg">
-          <div class="add_user_icon">
-            <i class="bi bi-upload"></i>
+
+          <div class="upload-profile">
+            <div class="file-upload">
+              <img [src]="imageURL" alt="profile pic">
+              <input #file type="file" name="somename" (change)="fileChange(file.files)" formControlName="profile">
+              <mat-error *ngIf="formFieldValidator('profile')">
+                <span *ngIf="formFieldErrors('profile')?.required">Profile required</span>
+              </mat-error>
+            </div>
           </div>
-          <p><button mat-button>upload photo</button> </p>
+
         </section>
         <section class="add_user_form_field">
           <div class="row">

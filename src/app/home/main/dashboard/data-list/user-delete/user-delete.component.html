@@ -1,6 +1,8 @@
 <h2 mat-dialog-title>Delete</h2>
-<div mat-dialog-content>Are you sure you want to delete these "{{data.id}} {{data.fname | uppercase}} {{data.lname |uppercase}}" from Record?</div>
-<div mat-dialog-actions class="del_user_btns">
-  <button mat-raised-button (click)="doAction()" color="primary" mat-dialog-close>Confirm</button>
+<div mat-dialog-content>Are you sure you want to delete these "{{data.id}} {{data.fname | uppercase}} {{data.lname
+  |uppercase}}" from Record?</div>
+
+<div mat-dialog-actions align="end" class="del_user_btns">
   <button mat-raised-button (click)="closeDialog()" color="warn">Close</button>
+  <button mat-raised-button (click)="doAction()" color="primary" mat-dialog-close>Confirm</button>
 </div>

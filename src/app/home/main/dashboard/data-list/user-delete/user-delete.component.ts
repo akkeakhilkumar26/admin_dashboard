@@ -20,18 +20,13 @@ export class UserDeleteComponent implements OnInit {
 
   store!: Structure[];
 
-  delete = (id: any): void => {
-    this.ds.delete(id).subscribe(
-      data => {
-        alert("Successfully deleted the record");
-      }
-    )
-  }
 
+  /* Confirm Method */
   doAction() {
     this.dialogRef.close({ event: this.action, data: this.local_data });
   }
 
+  /*Cancel*/
   closeDialog() {
     this.dialogRef.close({ event: 'Cancel' });
   }

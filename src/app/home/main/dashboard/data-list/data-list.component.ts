@@ -39,7 +39,11 @@ export class DataListComponent implements OnInit {
 
   store = new MatTableDataSource<Structure>();
 
-  userData!: Structure[];
+  public imagePath: any;
+
+  imageURl: any;
+
+  public message!: string;
 
   columns: string[] = ['id', 'name', 'pn', 'email', 'action'];
 
@@ -50,7 +54,6 @@ export class DataListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
   constructor(private _route: Router, private ds: DataService, public dialog: MatDialog) {
-
   }
 
 
@@ -70,7 +73,7 @@ export class DataListComponent implements OnInit {
   }
 
 
-
+  /*Delete method */
   delete = (index: any): any => {
     this.ds.delete(index).subscribe(
       data => {
@@ -82,6 +85,7 @@ export class DataListComponent implements OnInit {
 
   }
 
+  /* Dialog */
   openDialog(action: any, primary: any) {
     primary.action = action;
     const dialogRef = this.dialog.open(UserDeleteComponent, { data: primary });

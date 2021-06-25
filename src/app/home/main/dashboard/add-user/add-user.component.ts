@@ -17,12 +17,20 @@ export class AddUserComponent implements OnInit {
 
   store!: Structure[];
 
+  url: any = "";
+
+  public imagePath: any;
+
+  imageURL: any = "../../../../../assets/images/profile.png";
+
+  public message!: string;
+
   /* User Creation Form Fields */
   user!: FormGroup;
 
   ngOnInit(): void {
     this.user = this.fb.group({
-      profile: [''],
+      profile: ['', [Validators.required]],
       id: ['', [Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
       fname: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
       lname: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
@@ -33,6 +41,18 @@ export class AddUserComponent implements OnInit {
       cpwd: ['', [Validators.required]],
       org: ['', [Validators.required]]
     }, { validator: MustMatch('pwd', 'cpwd') })
+  }
+
+
+  onselect(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+
+      reader.onload = event => {
+        this.url = event.target?.result;
+      }
+    }
   }
 
   /*Groups*/
@@ -110,6 +130,26 @@ export class AddUserComponent implements OnInit {
 
   cancel = (): void => {
     this.user.reset();
+  }
+
+  fileChange(files: any) {
+    if (files.length == 0)
+      return;
+
+    let mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported";
+      return;
+    }
+
+    this.message = "";
+    let reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = (_event) => {
+      this.imageURL = reader.result;
+    }
+
   }
 
 

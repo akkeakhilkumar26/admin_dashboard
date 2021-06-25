@@ -27,4 +27,8 @@ export class DataService {
     return this.http.delete(`${this.url}/${id}`);
   }
 
+  edit(temp: Structure, id: any): Observable<any> {
+    return this.http.put(`${this.url}/${id}`, temp);
+  }
+
 }
