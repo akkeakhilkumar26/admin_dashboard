@@ -43,7 +43,25 @@ tr.mat-row, tr.mat-footer-row {
 .main_data_table .example-spacer {
   flex: 1 1 auto;
 }
-
+img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 10px;
+  position: relative;
+  transition: all 200ms ease-in;
+  transform: scale(1);   
+}
+img:hover{
+  border-radius: 4px;
+  box-shadow: 0px 0px 150px #000000;
+  z-index: 2;
+  transition: all 200ms ease-in;
+  transform: scale(2);
+  /* object-fit: contain; */
+}
 /* .data_table_header{
   padding: 10px 24px;
   
@@ -80,4 +98,3 @@ button a{
 .grouplist_crud_btns button:hover{
   Box-shadow: 0px 0px 15px lightgray;
 }
-

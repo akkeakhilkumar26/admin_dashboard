@@ -4,11 +4,12 @@
             <section class="user_sec_main">
               <p><span>User Details</span></p>
               <section class="user_profile_sec">
-                <input type="file" id="profile_upload">
-              <div class="add_user_icon">
-                <i class="bi bi-upload"></i>
-            </div>   
-        <p><button mat-button>upload photo</button> </p>    
+                <div class="upload-profile">
+                  <div class="file-upload">
+                      <img src="../../../../../assets/images/user_profile.png" alt="profile pic">
+                      <input #file type="file" name="somename"/>
+                  </div>
+              </div>   
           </section>
           <section class="add_user_form_field">
               <div class="row">

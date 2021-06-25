@@ -1,0 +1,68 @@
+.chng_usr_psswd{
+    width: 500px;
+}
+.chng_usr_psswd .chang_psswd_top_sec .mat-icon-button{
+    float: right; 
+    /* background-color: #fff !important; */
+    color: red;
+}
+.chng_usr_psswd .mat-dialog-title{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #e63946;
+    display: inline-block;
+}
+.chng_usr_psswd .mat-dialog-title span{
+    border-bottom: 2px dotted #a8dadc;
+}
+  .chng_psswd_img_sec{
+    text-align: center; 
+  }
+  .chng_psswd_img_sec img {
+     height: 100px;
+    /* width: 100%; */
+    object-fit: cover;
+    border: 2px solid grey;
+    padding: 4px;
+    border-radius: 3px;
+  }
+  .chng_psswd_img_sec_text {
+    padding-top: 20px;
+  }
+  .chng_psswd_img_sec .chng_psswd_img_sec_text h4 {
+    text-align: center;
+    margin-bottom: 10px !important;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    background: #f1faee;
+    color: #1d3557;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+  }
+  /* example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+   */
+  /* .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  } */
+/*   
+  input.example-right-align {
+    -moz-appearance: textfield;
+  } */
+
+  .chng_usr_psswd .chng_psswd_sav_btn button{
+      margin-top: 15px;
+      font-size: 12px;
+      line-height: 2.4;
+      /* background: lightgreen; */
+  }

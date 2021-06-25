@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { ChngUsrPsswdComponent } from './chng-usr-psswd/chng-usr-psswd.component';
 import { UserDeleteComponent } from './user-delete/user-delete.component';
 import { UserViewComponent } from './user-view/user-view.component';
 
@@ -40,11 +41,17 @@ export class DataListComponent implements OnInit {
     private _route: Router,
     public dialog: MatDialog
   ) {}
+  
   deleteUser() {
     this.dialog.open(UserDeleteComponent);
   }
+
 viewUser(){
   this.dialog.open(UserViewComponent);
+}
+
+changeuserPassword(){
+  this.dialog.open(ChngUsrPsswdComponent);
 }
   ngOnInit(): void {
   }
