@@ -41,13 +41,11 @@ export class DataListComponent implements OnInit {
 
   public imagePath: any;
 
-  imageURl: any;
-
   public message!: string;
 
   columns: string[] = ['id', 'name', 'pn', 'email', 'action'];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'profile','name', 'weight', 'symbol'];
 
 
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
@@ -77,7 +75,6 @@ export class DataListComponent implements OnInit {
   delete = (index: any): any => {
     this.ds.delete(index).subscribe(
       data => {
-        alert("Successfully deleted the record");
         console.log(data);
         this.display();
       }
@@ -108,7 +105,7 @@ export class DataListComponent implements OnInit {
     this.ds.details().subscribe(
       data => {
         this.store.data = data;
-        console.log(data);
+        //console.log(data);
       }
     )
   }

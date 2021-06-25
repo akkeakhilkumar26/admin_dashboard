@@ -117,8 +117,8 @@ text-align: left;
   }
 
   .file-upload img{
-    height:130px;
-    width:130px;
+    height:100px;
+    width:100px;
     box-shadow: 0 1px 5px #ABABAB;
     border-radius: 100%;
     object-fit: cover;

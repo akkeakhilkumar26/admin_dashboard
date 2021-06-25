@@ -18,8 +18,6 @@ export class UserDeleteComponent implements OnInit {
     this.action = this.local_data.action;
   }
 
-  store!: Structure[];
-
 
   /* Confirm Method */
   doAction() {
