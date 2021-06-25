@@ -85,9 +85,8 @@ text-align: left;
     line-height: 1.3;
     font-size: 12px;
   }
-  .add_user_section .add_user_form  .add_user_btns button a, .creat_group_btn button a{
-    color: white;
-    text-decoration: none;
+  .add_user_section .add_user_form  .add_user_btns button, .creat_group_btn button{
+    color: white !important;
   }
   .add_user_section .add_user_form .add_user_sub_btn{
       background: #1d3557;

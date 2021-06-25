@@ -103,9 +103,9 @@ export class AddUserComponent implements OnInit {
       data => {
         console.log(data);
         alert("Successfully added");
+        this.user.reset();
       }
-    )
-    this.user.reset();
+    );
   }
 
   cancel = (): void => {

@@ -39,15 +39,18 @@ export class DataListComponent implements OnInit {
 
   store = new MatTableDataSource<Structure>();
 
+  userData!: Structure[];
+
   columns: string[] = ['id', 'name', 'pn', 'email', 'action'];
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
 
-  @ViewChild(MatSort, {static:true}) sort!:MatSort;
-  @ViewChild(MatPaginator, {static:true}) paginator!:MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort!: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
-  constructor(private _route: Router, private ds: DataService) {
+  constructor(private _route: Router, private ds: DataService, public dialog: MatDialog) {
+
   }
 
 
@@ -58,7 +61,6 @@ export class DataListComponent implements OnInit {
   }
 
   /*get data*/
-
   display = (): any => {
     this.ds.details().subscribe(
       data => {
@@ -67,33 +69,37 @@ export class DataListComponent implements OnInit {
     )
   }
 
-  /*Delete*/
+
 
   delete = (index: any): any => {
-    let result = confirm("Are you sure delete the record");
-
-    if (result == true) {
-      this.ds.delete(index).subscribe(
-        data => {
-          alert("Successfully deleted the record");
-          console.log(data);
-
-          this.display();
-        }
-      )
-    }
-
-    else {
-      alert('record aborted');
-    }
+    this.ds.delete(index).subscribe(
+      data => {
+        alert("Successfully deleted the record");
+        console.log(data);
+        this.display();
+      }
+    )
 
   }
+
+  openDialog(action: any, primary: any) {
+    primary.action = action;
+    const dialogRef = this.dialog.open(UserDeleteComponent, { data: primary });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result.event == 'Delete') {
+        this.delete(primary.id);
+      }
+    })
+  }
+
+
 
 
   ngOnInit(): void {
 
-    //this.store.paginator = this.paginator; //Pagination
-    //this.store.sort = this.sort; // Sort
+    this.store.paginator = this.paginator; //Pagination
+    this.store.sort = this.sort; // Sort
 
     this.ds.details().subscribe(
       data => {

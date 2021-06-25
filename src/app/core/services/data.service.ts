@@ -23,7 +23,7 @@ export class DataService {
     return this.http.post("http://localhost:5555/user_details", temp)
   }
 
-  delete(id:any):Observable<any>{
+  delete(id: any): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }
 

@@ -14,7 +14,7 @@
           <div class="row">
             <div class="col-sm-3">
               <mat-form-field>
-                <input matInput type="text" placeholder="Enter Id" formControlName="id">
+                <input matInput type="text" placeholder="Enter Id" formControlName="id" required>
                 <mat-error *ngIf="formFieldValidator('id')">
                   <span *ngIf="formFieldErrors('id')?.required">Field Cannot Be Empty</span>
                   <span *ngIf="formFieldErrors('id')?.pattern">should be a number</span>
@@ -24,7 +24,7 @@
             <div class="col"></div>
             <div class="col-sm-4">
               <mat-form-field>
-                <input matInput type="text" placeholder="First Name" formControlName="fname">
+                <input matInput type="text" placeholder="First Name" formControlName="fname" required>
                 <mat-error *ngIf="formFieldValidator('fname')">
                   <span *ngIf="formFieldErrors('fname')?.required">Field Cannot Be Empty</span>
                   <span *ngIf="formFieldErrors('fname')?.pattern">should be a characters</span>
@@ -34,7 +34,7 @@
             <div class="col"></div>
             <div class="col-sm-4">
               <mat-form-field>
-                <input matInput type="text" placeholder="Last Name" formControlName="lname">
+                <input matInput type="text" placeholder="Last Name" formControlName="lname" required>
                 <mat-error *ngIf="formFieldValidator('lname')">
                   <span *ngIf="formFieldErrors('lname')?.required">Field Cannot Be Empty</span>
                   <span *ngIf="formFieldErrors('lname')?.pattern">should be a characters</span>
@@ -45,7 +45,8 @@
           <div class="row">
             <div class="col-sm-3">
               <mat-form-field>
-                <input matInput type="text" placeholder="Enter Phone number" formControlName="pn" maxlength="10">
+                <input matInput type="text" placeholder="Enter Phone number" formControlName="pn" maxlength="10"
+                  required>
                 <mat-error *ngIf="formFieldValidator('pn')">
                   <span *ngIf="formFieldErrors('pn')?.required">Field Cannot Be Empty</span>
                   <span *ngIf="formFieldErrors('pn')?.pattern">should be a number</span>
@@ -58,7 +59,7 @@
             <div class="col"></div>
             <div class="col-sm-4">
               <mat-form-field>
-                <input matInput type="email" placeholder="Enter Email" formControlName="email">
+                <input matInput type="email" placeholder="Enter Email" formControlName="email" required>
                 <mat-error *ngIf="formFieldValidator('email')">
                   <span *ngIf="formFieldErrors('email')?.required">Field Cannot Be Empty</span>
                   <span *ngIf="formFieldErrors('email')?.email">should be a valid email</span>
@@ -69,12 +70,7 @@
             <div class="col-sm-4">
               <mat-form-field>
                 <mat-label>Groups</mat-label>
-                <mat-select formControlName="groups">
-                  <!--<mat-option value="option">Group-A</mat-option>
-                  <mat-option value="option">Group-A</mat-option>
-                  <mat-option value="option">Group-B</mat-option>
-                  <mat-option>none</mat-option>-->
-
+                <mat-select formControlName="groups" required>
                   <mat-option *ngFor="let group1 of groups" [value]="group1.value">
                     {{group1.viewValue}}
                   </mat-option>
@@ -89,7 +85,7 @@
             <div class="col-sm-3">
               <mat-form-field>
                 <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="pwd"
-                  autocomplete="on">
+                  autocomplete="on" required>
                 <button mat-icon-button matSuffix (click)="hide =!hide" [attr.aria-label]="'Hide Password'"
                   [attr.aria-pressed]="hide">
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -105,7 +101,7 @@
             <div class="col-sm-4">
               <mat-form-field>
                 <input matInput [type]="hide ? 'password' : 'text'" placeholder="Confirm Password"
-                  formControlName="cpwd" autocomplete="on">
+                  formControlName="cpwd" autocomplete="on" required>
                 <button mat-icon-button matSuffix (click)="hide =!hide" [attr.aria-label]="'Hide password'"
                   [attr.aria-pressed]="hide">
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -115,18 +111,12 @@
                   <span *ngIf="user.controls['cpwd'].errors?.mustMatch">Passwords must match</span>
                 </mat-error>
               </mat-form-field>
-              <!--<mat-error *ngIf="user.controls['cpwd'].value != user.controls['pwd'].value">Passwords not match
-              </mat-error>-->
             </div>
             <div class="col"></div>
             <div class="col-sm-4">
               <mat-form-field>
                 <mat-label>Choose Organisation</mat-label>
-                <mat-select formControlName="org">
-                  <!--<mat-option value="option">Internal</mat-option>
-                  <mat-option value="option">External</mat-option>
-                  <mat-option>none</mat-option>-->
-
+                <mat-select formControlName="org" required>
                   <mat-option *ngFor="let org1 of org" [value]="org1.value">
                     {{org1.viewValue}}
                   </mat-option>
@@ -160,10 +150,8 @@
           </div>
         </section>
         <section class="add_user_btns">
-          <button (click)="cancel()" mat-button class="add_user_can_btn">
-            <a href="#">cancel</a></button>
-          <button (click)="add()" mat-button class="add_user_sub_btn">
-            <a href="#"> submit</a></button>
+          <button (click)="cancel()" mat-button class="add_user_can_btn">Cancel</button>
+          <button (click)="add()" [disabled]="user.invalid" mat-raised-button color="primary">Submit</button>
         </section>
       </section>
     </form>
