@@ -49,49 +49,13 @@
       "org": "External"
     },
     {
-      "profile": "",
-      "id": "5",
-      "fname": "Avinash",
-      "lname": "Kumar",
-      "pn": "7458475845",
-      "email": "avinash@gmail.com",
-      "groups": "Group-C",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "Internal"
-    },
-    {
-      "profile": "",
-      "id": "8",
-      "fname": "Stuart",
-      "lname": "Broad",
-      "pn": "7348378437",
-      "email": "sturat@gmail.com",
-      "groups": "Group-C",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "External"
-    },
-    {
-      "profile": "",
-      "id": "9",
-      "fname": "Steven",
-      "lname": "Smith",
-      "pn": "8457847548",
-      "email": "steven@gmail.com",
-      "groups": "Group-A",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "External"
-    },
-    {
       "profile": "C:\\fakepath\\ben-parker-OhKElOkQ3RE-unsplash.jpg",
-      "id": "6",
+      "id": "5",
       "fname": "Jim",
       "lname": "Parker",
-      "pn": "7834738473",
+      "pn": "7485748574",
       "email": "jim@gmail.com",
-      "groups": "Group-B",
+      "groups": "Group-C",
       "pwd": "123456",
       "cpwd": "123456",
       "org": "External"

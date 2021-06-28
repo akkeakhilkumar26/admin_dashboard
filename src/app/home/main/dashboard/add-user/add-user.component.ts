@@ -44,7 +44,7 @@ export class AddUserComponent implements OnInit {
   }
 
 
-  onselect(event: any) {
+  /*onselect(event: any) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
@@ -53,7 +53,7 @@ export class AddUserComponent implements OnInit {
         this.url = event.target?.result;
       }
     }
-  }
+  }*/
 
   /*Groups*/
   groups = [
@@ -132,6 +132,8 @@ export class AddUserComponent implements OnInit {
     this.user.reset();
   }
 
+
+  /* Image Picker Code*/
   fileChange(files: any) {
     if (files.length == 0)
       return;

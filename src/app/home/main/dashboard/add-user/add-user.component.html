@@ -9,7 +9,7 @@
           <div class="upload-profile">
             <div class="file-upload">
               <img [src]="imageURL" alt="profile pic">
-              <input #file type="file" name="somename" (change)="fileChange(file.files)" formControlName="profile">
+              <input #file type="file" name="somename" (change)="fileChange(file.files)" formControlName="profile" accept="image/png, image/jpeg">
               <mat-error *ngIf="formFieldValidator('profile')">
                 <span *ngIf="formFieldErrors('profile')?.required">Profile required</span>
               </mat-error>
