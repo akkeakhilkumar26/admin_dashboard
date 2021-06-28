@@ -3,45 +3,9 @@
     {
       "profile": "",
       "id": "1",
-      "fname": "Rama",
-      "lname": "Sundar",
-      "pn": "3847384738",
-      "email": "rama@gmail.com",
-      "groups": "Group-B",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "External"
-    },
-    {
-      "profile": "",
-      "id": "2",
-      "fname": "Ravi",
-      "lname": "Kumar",
-      "pn": "7364736473",
-      "email": "ravi@gmail.com",
-      "groups": "Group-A",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "External"
-    },
-    {
-      "profile": "",
-      "id": "3",
-      "fname": "Santa",
-      "lname": "Kumar",
-      "pn": "6745736537",
-      "email": "santa@gmail.comm",
-      "groups": "Group-C",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "External"
-    },
-    {
-      "profile": "",
-      "id": "4",
       "fname": "Jim",
       "lname": "Parker",
-      "pn": "834837438",
+      "pn": "8745847547",
       "email": "jim@gmail.com",
       "groups": "Group-B",
       "pwd": "123456",
@@ -49,16 +13,16 @@
       "org": "External"
     },
     {
-      "profile": "",
-      "id": "5",
+      "profile": null,
+      "id": "2",
       "fname": "Ramesh",
       "lname": "Kumar",
-      "pn": "8475847854",
+      "pn": "7458457485",
       "email": "ramesh@gmail.com",
-      "groups": "Group-C",
-      "pwd": "123456",
-      "cpwd": "123456",
-      "org": "Internal"
+      "groups": "Group-A",
+      "pwd": "123456789",
+      "cpwd": "123456789",
+      "org": "External"
     }
   ]
 }

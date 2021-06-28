@@ -35,7 +35,7 @@ export class AddUserComponent implements OnInit {
       id: ['', [Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
       fname: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
       lname: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
-      pn: ['', [Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/), Validators.maxLength(10)]],
+      pn: ['', [Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/), Validators.minLength(10)]],
       email: ['', [Validators.required, Validators.email]],
       groups: ['', [Validators.required]],
       pwd: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],

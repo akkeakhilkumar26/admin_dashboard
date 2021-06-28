@@ -55,7 +55,7 @@
                 <mat-error *ngIf="formFieldValidator('pn')">
                   <span *ngIf="formFieldErrors('pn')?.required">Field Cannot be empty</span>
                   <span *ngIf="formFieldErrors('pn')?.pattern">Should be a number</span>
-                  <span *ngIf="formFieldErrors('pn')?.maxlength">Phone number should be 10 numbers</span>
+                  <span *ngIf="formFieldErrors('pn')?.minlength">Phone number should be 10 numbers</span>
                 </mat-error>
                 <!-- <mat-icon matSuffix> phone</mat-icon> -->
               </mat-form-field>
