@@ -31,6 +31,52 @@
                     </mat-form-field>
                   </div>
                 </div>
+
+                <div class="col-12">
+                  <div class="exmaple-container">
+                    <mat-form-field>
+                      <mat-label>First Name</mat-label>
+                      <input matInput formControlName="fname" placeholder="fnmae">
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="example-container">
+                    <mat-form-field>
+                      <mat-label>Last Name</mat-label>
+                      <input matInput formControlName="lname" placeholder="Last name">
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="example-container">
+                    <mat-form-field>
+                      <mat-label>Phone Number</mat-label>
+                      <input matInput formControlName="pn" placeholder="Phone Number">
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="example-container">
+                    <mat-form-field>
+                      <mat-label>Email</mat-label>
+                      <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="example-container">
+                    <mat-form-field>
+                      <mat-label>Groups</mat-label>
+                      <input matInput formControlName="groups" placeholder="Groups">
+                    </mat-form-field>
+                  </div>
+                </div>
+
                 <div class="col-12">
                   <div class="example-container">
                     <mat-form-field>
@@ -47,11 +93,21 @@
                   <div class="example-container">
                     <mat-form-field>
                       <mat-label>Confirm password</mat-label>
-                      <input matInput [type]="hide ? 'password' : 'text'" autocomplete="on" formControlName="confirm_password">
+                      <input matInput [type]="hide ? 'password' : 'text'" autocomplete="on"
+                        formControlName="confirm_password">
                       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                       </button>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="exmaple-container">
+                    <mat-form-field>
+                      <mat-label>Organization</mat-label>
+                      <input matInput formControlName="org" placeholder="organization">
                     </mat-form-field>
                   </div>
                 </div>

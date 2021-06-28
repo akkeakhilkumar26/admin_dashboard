@@ -43,8 +43,14 @@ export class ChngUsrPsswdComponent implements OnInit {
     let temp = new Structure();
 
     temp.id = this.user.controls['id'].value;
+    temp.fname=this.user.controls['fname'].value;
+    temp.lname=this.user.controls['lname'].value;
+    temp.pn=this.user.controls['pn'].value;
+    temp.email=this.user.controls['email'].value;
+    temp.groups=this.user.controls['groups'].value;
     temp.pwd = this.user.controls['password'].value;
     temp.cpwd = this.user.controls['confirm_password'].value;
+    temp.org=this.user.controls['org'].value;
 
     let id = Number(temp.id);
 
