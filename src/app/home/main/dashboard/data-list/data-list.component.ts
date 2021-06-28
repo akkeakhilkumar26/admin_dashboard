@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { ChngUsrPsswdComponent } from './chng-usr-psswd/chng-usr-psswd.component';
 import { UserDeleteComponent } from './user-delete/user-delete.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { Structure } from 'src/app/core/models/structure';
@@ -45,7 +46,9 @@ export class DataListComponent implements OnInit {
 
   columns: string[] = ['id', 'name', 'pn', 'email', 'action'];
 
-  displayedColumns: string[] = ['position', 'profile','name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'email', 'weight', 'department', 'action'];
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+
 
 
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
@@ -61,7 +64,22 @@ export class DataListComponent implements OnInit {
     this.store.filter = filterValue.trim().toLowerCase();
   }
 
-  /*get data*/
+  /*deleteUser() {
+    this.dialog.open(UserDeleteComponent);
+  }*/
+
+  viewUser(primary: any) {
+    this.dialog.open(UserViewComponent, { data: primary, height: '350px', width: '550px' });
+  }
+
+  changeuserPassword(primary:any) {
+    this.dialog.open(ChngUsrPsswdComponent, {data:primary, height:'400px', width:'600px'});
+  }
+
+  goTo() {
+    this._route.navigate(['/home/add-user'])
+  }
+
   display = (): any => {
     this.ds.details().subscribe(
       data => {
@@ -70,8 +88,6 @@ export class DataListComponent implements OnInit {
     )
   }
 
-
-  /*Delete method */
   delete = (index: any): any => {
     this.ds.delete(index).subscribe(
       data => {
@@ -79,10 +95,8 @@ export class DataListComponent implements OnInit {
         this.display();
       }
     )
-
   }
 
-  /* Dialog */
   openDialog(action: any, primary: any) {
     primary.action = action;
     const dialogRef = this.dialog.open(UserDeleteComponent, { data: primary });
@@ -93,8 +107,6 @@ export class DataListComponent implements OnInit {
       }
     })
   }
-
-
 
 
   ngOnInit(): void {
@@ -108,12 +120,6 @@ export class DataListComponent implements OnInit {
         //console.log(data);
       }
     )
-  }
-
-
-
-  goTo() {
-    this._route.navigate(['/home/add-user'])
   }
 
 }

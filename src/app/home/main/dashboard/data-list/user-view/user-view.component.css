@@ -1,0 +1,42 @@
+.user_view{
+    width: 500px;
+}
+.user_view .mat-dialog-title{
+    font-weight: 500; 
+    color: #e63946;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.user_view p span{
+  border-bottom: 2px dotted #a8dadc;
+}
+.user_view .user_view_img_sec img{
+    height: 100px;
+    /* width: 100%; */
+    object-fit: cover;
+    border: 1px solid grey;
+    padding: 4px;
+    border-radius: 3px;
+}
+.user_profile_view_text {
+    padding-top: 20px;
+  }
+.user_profile_view_text h4 {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .mat-list-base .mat-list-item {
+    font-size: 12px;
+}
+.user_view .user_details p{
+    font-weight: 500; 
+    color: #1d3557;
+    margin: 10px 0px;
+    font-size: 13px;
+}
+.user_view .user_details span, .user_view .user_details h4{
+    font-size: 12px;
+    margin: 5px 0px;
+}

@@ -3,6 +3,7 @@ import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms'
 import { MustMatch } from "../../../../core/functions/passValidation";
 import { Structure } from 'src/app/core/models/structure';
 import { DataService } from 'src/app/core/services/data.service';
+import { UserDeleteComponent } from '../data-list/user-delete/user-delete.component';
 
 @Component({
   selector: 'app-add-user',
@@ -83,6 +84,8 @@ export class AddUserComponent implements OnInit {
   ]
 
 
+
+
   /*User Creation Validations */
   formFieldErrors(val: string) {
     return this.user.get(val)?.errors;
@@ -101,6 +104,27 @@ export class AddUserComponent implements OnInit {
         console.log(data);
       }
     )
+  }
+
+  /* Image Picker Code*/
+  fileChange(files: any) {
+    if (files.length == 0)
+      return;
+
+    let mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported";
+      return;
+    }
+
+    this.message = "";
+    let reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = (_event) => {
+      this.imageURL = reader.result;
+    }
+
   }
 
   /* Post Method*/
@@ -133,26 +157,9 @@ export class AddUserComponent implements OnInit {
   }
 
 
-  /* Image Picker Code*/
-  fileChange(files: any) {
-    if (files.length == 0)
-      return;
 
-    let mimeType = files[0].type;
-    if (mimeType.match(/image\/*/) == null) {
-      this.message = "Only images are supported";
-      return;
-    }
 
-    this.message = "";
-    let reader = new FileReader();
-    this.imagePath = files;
-    reader.readAsDataURL(files[0]);
-    reader.onload = (_event) => {
-      this.imageURL = reader.result;
-    }
 
-  }
 
 
 

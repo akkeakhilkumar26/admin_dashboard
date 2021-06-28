@@ -39,26 +39,26 @@
     {
       "profile": "",
       "id": "4",
-      "fname": "Mukesh",
-      "lname": "Ambani",
-      "pn": "8748547875",
-      "email": "mukesh@gmail.com",
+      "fname": "Jim",
+      "lname": "Parker",
+      "pn": "834837438",
+      "email": "jim@gmail.com",
       "groups": "Group-B",
       "pwd": "123456",
       "cpwd": "123456",
       "org": "External"
     },
     {
-      "profile": "C:\\fakepath\\ben-parker-OhKElOkQ3RE-unsplash.jpg",
+      "profile": "",
       "id": "5",
-      "fname": "Jim",
-      "lname": "Parker",
-      "pn": "7485748574",
-      "email": "jim@gmail.com",
+      "fname": "Ramesh",
+      "lname": "Kumar",
+      "pn": "8475847854",
+      "email": "ramesh@gmail.com",
       "groups": "Group-C",
       "pwd": "123456",
       "cpwd": "123456",
-      "org": "External"
+      "org": "Internal"
     }
   ]
 }

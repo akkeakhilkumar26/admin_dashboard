@@ -1,0 +1,65 @@
+<div class="chng_usr_psswd">
+    <div class="chang_psswd_top_sec">
+        <h4 mat-dialog-title><span>Change Password</span></h4>
+        <button mat-icon-button mat-dialog-close color="accent">
+            <mat-icon>cancel</mat-icon>
+          </button>
+        <mat-icon ></mat-icon>
+    </div>
+    <div mat-dialog-content>
+        <form>
+        <div class="row">
+            <div class="col-4">
+              <section class="chng_psswd_img_sec">
+                  <img src="assets\images\user_view.jpg"  alt="...">
+                  <div class="chng_psswd_img_sec_text">
+                    <h4>{{data.id}}</h4>
+                    <h4>{{data.fname}} {{data.lname}}</h4>
+                  </div>
+                </section>
+            </div>
+            <div class="col" style="border-left:1px solid gray;">
+              <div class="user_profile_information">
+                      <section style="margin-top: 40px;">
+                          <div class="row">
+                              <div class="col-12">
+                                <div class="example-container">
+                                    <mat-form-field>
+                                      <mat-label>Enter password</mat-label>
+                                      <input matInput [type]="hide ? 'password' : 'text'">
+                                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                        <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                                      </button>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                              <div class="col-12">
+                                <div class="example-container">
+                                    <mat-form-field>
+                                      <mat-label>Confirm password</mat-label>
+                                      <input matInput [type]="hide ? 'password' : 'text'">
+                                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                      </button>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                    </div>
+          </section>
+        </div>
+        </div>
+        </div>
+        <div class="row" style="border-top: 1px solid gray; margin-top: 10px;">
+            <div class="col-3"></div>
+            <div class="col-7">
+                <section class="chng_psswd_sav_btn">
+                    <button mat-raised-button color="primary" mat-dialog-close>Save</button>
+                </section>
+            </div>
+        </div>
+    </form>
+    </div>
+    <!-- <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Close</button>
+    </div> -->
+</div>
