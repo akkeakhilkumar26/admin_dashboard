@@ -155,8 +155,8 @@
           </div>
         </section>
         <section class="add_user_btns">
-          <button mat-button class="add_user_can_btn">cancel</button>
-          <button mat-button (click)="add()" class="add_user_sub_btn">submit</button>
+          <button mat-raised-button (click)="cancel()" class="add_user_can_btn">cancel</button>
+          <button mat-raised-button (click)="add()" [disabled]="user.invalid" color="primary">submit</button>
         </section>
       </section>
     </form>

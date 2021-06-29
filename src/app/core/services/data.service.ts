@@ -11,8 +11,9 @@ export class DataService {
 
   url = "http://localhost:5555/user_details";
 
-  constructor(private http: HttpClient) {
+  group_url = "http://localhost:3000/group";
 
+  constructor(private http: HttpClient) {
   }
 
   details(): Observable<any> {
@@ -30,5 +31,7 @@ export class DataService {
   edit(temp: Structure, id: any): Observable<any> {
     return this.http.put(`${this.url}/${id}`, temp);
   }
+
+
 
 }

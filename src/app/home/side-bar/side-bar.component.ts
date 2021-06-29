@@ -40,11 +40,7 @@ export class SideBarComponent implements OnInit {
     });
   }
   openDialog() {
-    this.dialog.open(CreategroupComponent, {
-      data: {
-        animal: 'panda'
-      }
-    });
+    this.dialog.open(CreategroupComponent);
   }
   openOrganisation() {
     this.dialog.open(CreateorganisationComponent, {

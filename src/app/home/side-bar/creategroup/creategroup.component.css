@@ -27,13 +27,13 @@
     border-bottom: 1px solid #1d3557;
 }
 .create_user_main p, .create_group_permissions p{
-    font-weight: 500; 
+    font-weight: 500;
     color: #e63946;
     margin-bottom: 20px;
 }
 .create_user_main p span{
   border-bottom: 2px dotted #a8dadc;
-  padding-bottom: 6px; 
+  padding-bottom: 6px;
   font-size: 13px !important;
 }
 .create_group_main .mat-card{
@@ -42,7 +42,7 @@
 .create_user_main .create_group_main .mat-card img{
     width: 45px;
     height: 45px;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 50%;
      margin-right: 8px;
 }
@@ -72,4 +72,8 @@ mat-card-header-text {
 }
 .create_group_btn .cancel_btn{
 background: #e63946;
+}
+
+table{
+  width:100%;
 }

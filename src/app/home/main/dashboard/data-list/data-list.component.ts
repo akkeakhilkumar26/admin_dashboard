@@ -73,7 +73,7 @@ export class DataListComponent implements OnInit {
   }
 
   changeuserPassword(primary: any) {
-    this.dialog.open(ChngUsrPsswdComponent, { data: primary, height: '550px', width: '640px' });
+    this.dialog.open(ChngUsrPsswdComponent, { data: primary });
   }
 
   goTo() {

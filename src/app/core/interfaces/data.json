@@ -46,6 +46,29 @@
       "pwd": "123456",
       "cpwd": "123456",
       "org": "External"
+    },
+    {
+      "profile": "C:\\fakepath\\pexels-steshka-willems-1308713.jpg",
+      "id": "5",
+      "fname": "Ravi",
+      "lname": "Kumar",
+      "pn": "7838473847",
+      "email": "ravi@gmail.com",
+      "groups": "Group-C",
+      "pwd": "123456",
+      "cpwd": "123456",
+      "org": "External"
+    },
+    {
+      "id": "6",
+      "fname": "Santa",
+      "lname": "Kumar",
+      "pn": "8783478748",
+      "email": "santa@gmail.com",
+      "groups": "Group-C",
+      "pwd": "123456",
+      "cpwd": "123456",
+      "org": "Internal"
     }
   ]
 }
